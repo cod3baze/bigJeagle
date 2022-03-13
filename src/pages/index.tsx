@@ -1,5 +1,7 @@
 import Head from "next/head";
 
+import { Header } from "../components/Header";
+
 import styles from "../styles/pages/Home.module.scss";
 
 export default function Home() {
@@ -11,8 +13,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.container}>
-        <h1>eliasallex</h1>
+      <div id={styles.container}>
+        <Header />
       </div>
     </>
   );

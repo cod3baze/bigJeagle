@@ -1,0 +1,112 @@
+header#headerContainer {
+  height: var(--header-height);
+
+  transition: var(--transition-base);
+  background: var(--secondary);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+  > nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    margin: auto;
+
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+
+    .logoContainer {
+      display: grid;
+      align-items: center;
+      grid-auto-flow: column;
+    }
+
+    > ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: var(--gap-base);
+
+      transition: var(--transition-base);
+
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 5px 30px;
+        border-radius: var(--border-radius-large);
+        transition: var(--transition-base);
+
+        &:hover {
+          filter: brightness(1.2);
+        }
+        &.products {
+          background: var(--tertiary);
+          color: var(--white);
+
+          font-size: 1.2rem;
+        }
+        &.signup {
+          background: var(--foreground);
+          color: var(--white);
+
+          font-size: 1.2rem;
+          font-weight: bold;
+        }
+      }
+      .collapsibleButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: all 0.2s;
+        background-color: transparent;
+
+        width: 40px;
+        height: 35px;
+        border-radius: 6px;
+        margin-left: 0.8rem;
+
+        background-color: var(--tertiary-02);
+        &:hover {
+          background-color: var(--tertiary);
+        }
+      }
+    }
+  }
+}
+
+.searchForm {
+  width: 500px;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  > input {
+    height: 3rem;
+    width: 100%;
+    border-radius: var(--border-radius-xxlarge);
+    padding: 0 45px;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: -0.011rem;
+
+    border: 0;
+    transition: var(--transition-base);
+    font: normal 400 1.15rem "Chivo", sans-serif;
+    line-height: 26px;
+
+    cursor: text;
+
+    color: var(--gray-200);
+    background: var(--black);
+  }
+
+  .look {
+    position: absolute;
+    left: 12px;
+    margin-top: 2px;
+  }
+}

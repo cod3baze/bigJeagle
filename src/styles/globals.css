@@ -1,16 +1,122 @@
-html,
-body {
+* {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font: 400 1.2rem "Chivo", sans-serif, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --primary: #121214;
+  --secondary: #1f2023;
+  --tertiary: #272727;
+  --tertiary-02: #2c2c2c;
+
+  --white: #f8f8f8;
+  --black: #000000;
+
+  --gray-100: #dedede;
+  --gray-200: #6d6d6e;
+  --gray-300: #999999;
+  --gray-400: #b3b3b3;
+
+  --genesys: #2ea44f;
+  --notification: #f25;
+  --foreground: #eba417;
+
+  --header-height: 5rem;
+  --max-coverage: 1120px;
+
+  --font-size-base: 1.2rem;
+  --font-size-small: 1rem;
+  --font-size-large: 1.5rem;
+  --font-size-xlarge: 2rem;
+  --font-size-xxlarge: 2.5rem;
+
+  --gap-base: 0.5rem;
+  --gap-small: 0.25rem;
+  --gap-large: 1rem;
+  --gap-xlarge: 1.5rem;
+  --gap-xxlarge: 2rem;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  --border-radius: 0.25rem;
+  --border-radius-small: 0.125rem;
+  --border-radius-large: 0.5rem;
+  --border-radius-xlarge: 1rem;
+  --border-radius-xxlarge: 1.5rem;
+
+  --box-shadow-small: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.1);
+  --box-shadow-large: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+
+  --transition-duration: 0.2s;
+  --transition-ease: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  --transition-duration-fast: 0.1s;
+  --transition-ease-fast: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  --transition-duration-slow: 0.4s;
+  --transition-ease-slow: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  --transition-base: all var(--transition-duration) var(--transition-ease);
+  --transition-fast: var(--transition-duration-fast) var(--transition-ease-fast);
+  --transition-slow: var(--transition-duration-slow) var(--transition-ease-slow);
+}
+
+#__next,
+body {
+  height: 100%;
+  background: var(--primary);
+}
+
+html {
+  font-size: 92.4%;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+button,
+input,
+textarea {
+  font-family: "Chivo", Arial, Helvetica, sans-serif;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
+a:hover {
+  text-decoration: underline;
+}
 
-* {
-  box-sizing: border-box;
+ul li {
+  list-style: none;
 }
