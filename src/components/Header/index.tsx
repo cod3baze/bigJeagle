@@ -1,7 +1,9 @@
 import NextLink from "next/link";
-import { FiChevronDown, FiChevronsDown, FiSearch } from "react-icons/fi";
+import { FiChevronDown, FiSearch } from "react-icons/fi";
 
-import styles from "../styles/components/Header.module.scss";
+import { MoreOptions } from "./Dropdowns/MoreOptions";
+
+import styles from "../../styles/components/Header.module.scss";
 
 export function Header() {
   return (
@@ -46,9 +48,7 @@ export function Header() {
             </button>
           </li>
           <li>
-            <button className={styles.collapsibleButton} type="button">
-              <FiChevronsDown size={24} color="var(--gray-100)" />
-            </button>
+            <MoreOptions />
           </li>
         </ul>
       </nav>

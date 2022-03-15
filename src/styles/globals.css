@@ -71,8 +71,10 @@ body {
   --transition-ease-slow: cubic-bezier(0.645, 0.045, 0.355, 1);
 
   --transition-base: all var(--transition-duration) var(--transition-ease);
-  --transition-fast: var(--transition-duration-fast) var(--transition-ease-fast);
-  --transition-slow: var(--transition-duration-slow) var(--transition-ease-slow);
+  --transition-fast: all var(--transition-duration-fast)
+    var(--transition-ease-fast);
+  --transition-slow: all var(--transition-duration-slow)
+    var(--transition-ease-slow);
 }
 
 #__next,

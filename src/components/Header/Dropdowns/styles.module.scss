@@ -1,0 +1,18 @@
+.collapsibleButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.2s;
+  background-color: transparent;
+
+  width: 40px;
+  height: 35px;
+  border-radius: 6px;
+  margin-left: 0.8rem;
+
+  background-color: var(--tertiary-02);
+  &:hover {
+    background-color: var(--tertiary);
+  }
+}
