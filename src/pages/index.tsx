@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 import { Header } from "../components/Header";
 
@@ -26,6 +27,70 @@ export default function Home() {
             <div>
               <button className={styles.signup}>Sign up</button>
               <button className={styles.login}>Login</button>
+            </div>
+          </section>
+
+          <section className={styles.artists}>
+            <div className={styles.artistCoverage}>
+              <div className={styles.artistGroup}>
+                <h2>Recently booked</h2>
+
+                <article>
+                  <div className={styles.controller}>
+                    <button type="button" className={styles.prev}>
+                      <FiChevronLeft size={30} />
+                    </button>
+                    <button type="button" className={styles.next}>
+                      <FiChevronRight size={30} />
+                    </button>
+                  </div>
+
+                  <div className={styles.cards}>
+                    <div className={styles.card}>
+                      <img
+                        src="https://github.com/eliasallex.png"
+                        alt="artist"
+                      />
+                      <div className="card-content">
+                        <h3>Elias alexandre</h3>
+                      </div>
+                    </div>
+                    <div className={styles.card}>
+                      <img src="https://github.com/diego3g.png" alt="artist" />
+                      <div className="card-content">
+                        <h3>Elias alexandre</h3>
+                      </div>
+                    </div>
+                    <div className={styles.card}>
+                      <img
+                        src="https://github.com/maykbrito.png"
+                        alt="artist"
+                      />
+                      <div className="card-content">
+                        <h3>Elias alexandre</h3>
+                      </div>
+                    </div>
+                    <div className={styles.card}>
+                      <img src="https://github.com/mebjas.png" alt="artist" />
+                      <div className="card-content">
+                        <h3>Elias alexandre</h3>
+                      </div>
+                    </div>
+                    <div className={styles.card}>
+                      <img src="https://github.com/torvalds.png" alt="artist" />
+                      <div className="card-content">
+                        <h3>Elias alexandre</h3>
+                      </div>
+                    </div>
+                    <div className={styles.card}>
+                      <img src="https://github.com/Pipas.png" alt="artist" />
+                      <div className="card-content">
+                        <h3>Elias alexandre</h3>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
             </div>
           </section>
         </main>
