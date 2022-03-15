@@ -1,6 +1,7 @@
 import NextLink from "next/link";
-import { FiChevronDown, FiSearch } from "react-icons/fi";
+import { FiSearch } from "react-icons/fi";
 
+import { Products } from "./Dropdowns/Products";
 import { MoreOptions } from "./Dropdowns/MoreOptions";
 
 import styles from "../../styles/components/Header.module.scss";
@@ -31,13 +32,7 @@ export function Header() {
 
         <ul>
           <li>
-            <button
-              className={`${styles.button} ${styles.products}`}
-              type="button"
-            >
-              <span>Products</span>
-              <FiChevronDown size={24} color="var(--gray-300)" />
-            </button>
+            <Products />
           </li>
           <li>
             <button
