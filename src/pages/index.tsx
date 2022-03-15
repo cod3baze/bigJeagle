@@ -15,6 +15,20 @@ export default function Home() {
 
       <div id={styles.container}>
         <Header />
+
+        <main id={styles.main}>
+          <section className={styles.heading}>
+            <h1>See artist schedules</h1>
+            <p>
+              BigJeagle é a forma mais fácil de ver e buscar as agendas
+              <br /> de seus artistas favoritos & more.
+            </p>
+            <div>
+              <button className={styles.signup}>Sign up</button>
+              <button className={styles.login}>Login</button>
+            </div>
+          </section>
+        </main>
       </div>
     </>
   );

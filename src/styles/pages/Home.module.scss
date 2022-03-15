@@ -1,3 +1,85 @@
 div#container {
   background: var(--primary);
 }
+
+#main {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s;
+}
+
+section.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 2rem;
+  height: calc(100vh - var(--header-height) - 1rem);
+
+  transition: all 0.2s;
+
+  h1 {
+    font: normal 900 5.8rem "Chivo", sans-serif;
+    line-height: 8rem;
+    color: var(--foreground);
+
+    transition: all 0.2s;
+
+    animation: colorCycle 10s ease-in-out infinite;
+
+    &::selection {
+      background-color: var(--secondary);
+      color: var(--primary);
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--gray-300);
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem 0.5rem 0.5rem;
+
+    button {
+      width: 100px;
+      height: 36px;
+      padding: 0.2rem;
+      font-size: 1.2rem;
+
+      border-radius: var(--border-radius-xlarge);
+
+      transition: all 0.2s;
+
+      &:hover {
+        filter: brightness(1.2);
+      }
+      &.signup {
+        background: var(--foreground);
+        color: var(--black);
+
+        font-weight: bold;
+      }
+      &.login {
+        background: var(--tertiary);
+        color: var(--white);
+      }
+    }
+  }
+}
+
+@keyframes colorCycle {
+  0%,
+  55% {
+    filter: brightness(0) invert(1);
+  }
+  11%,
+  33% {
+    filter: none;
+  }
+}
