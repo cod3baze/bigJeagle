@@ -1,0 +1,9 @@
+div#container {
+  background: var(--primary);
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s;
+}

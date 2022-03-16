@@ -6,7 +6,11 @@ import { MoreOptions } from "./Dropdowns/MoreOptions";
 
 import styles from "../../styles/components/Header.module.scss";
 
-export function Header() {
+interface HeaderProps {
+  disableSearchRedirect?: boolean;
+}
+
+export function Header({ disableSearchRedirect = false }: HeaderProps) {
   return (
     <header id={styles.headerContainer}>
       <nav id="bigJeagle">
@@ -17,17 +21,37 @@ export function Header() {
         </div>
 
         <div>
-          <form className={styles.searchForm}>
-            <input
-              type="search"
-              id="search"
-              data-target="search"
-              placeholder="Search artist for book"
-            />
-            <div className={styles.look}>
-              <FiSearch size={24} color="var(--gray-300)" />
-            </div>
-          </form>
+          {disableSearchRedirect ? (
+            <form className={styles.searchForm}>
+              <input
+                type="search"
+                id="search"
+                data-target="search"
+                placeholder="Search artist for book"
+                autoFocus
+              />
+              <div className={styles.look}>
+                <FiSearch size={24} color="var(--gray-300)" />
+              </div>
+            </form>
+          ) : (
+            <NextLink href="/search" passHref>
+              <a>
+                <form className={styles.searchForm}>
+                  <input
+                    type="search"
+                    id="search"
+                    data-target="search"
+                    placeholder="Search artist for book"
+                    autoFocus
+                  />
+                  <div className={styles.look}>
+                    <FiSearch size={24} color="var(--gray-300)" />
+                  </div>
+                </form>
+              </a>
+            </NextLink>
+          )}
         </div>
 
         <ul>
