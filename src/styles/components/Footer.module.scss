@@ -8,6 +8,7 @@
   color: var(--secondary);
 
   padding: 0 2rem;
+  margin-top: 4rem;
 
   transition: 0.6s all cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -37,6 +38,7 @@
     > div.left {
       display: flex;
       flex-direction: column;
+      margin-right: 1.5rem;
 
       .logo {
         width: 256px;
@@ -70,27 +72,29 @@
 
       ul {
         span {
-          font-size: 16px;
+          font-size: 1.3rem;
           font-weight: 700;
           line-height: 36px;
-          color: var(--hight-text);
+          color: var(--gray-200);
         }
         li {
           display: flex;
 
           a {
-            font-size: 16px;
+            font-size: 1.2rem;
             font-weight: 400;
-            line-height: 36px;
+            line-height: 26px;
             padding: 0;
-            color: var(--hight-text-light);
+            color: var(--tertiary);
+
+            &::selection {
+              color: var(--hight-text-light);
+              background: var(--dominating);
+            }
           }
           p {
             max-width: 187px;
-
-            &.fText {
-              color: var(--hight-text-light);
-            }
+            line-height: 26px;
           }
         }
       }
@@ -132,19 +136,19 @@
         align-items: center;
         justify-content: center;
 
-        border-radius: 1rem;
+        border-radius: 50%;
         width: 56px;
-        height: 43px;
+        height: 56px;
 
         transition: 0.3s all cubic-bezier(0.4, 0, 0.2, 1);
 
         &:hover {
-          background: var(--secondary-dark);
+          background: var(--gray-100);
         }
-      }
 
-      svg {
-        transition: 0.6s all cubic-bezier(0.4, 0, 0.2, 1);
+        svg {
+          transition: 0.6s all cubic-bezier(0.4, 0, 0.2, 1);
+        }
       }
     }
 
@@ -155,15 +159,15 @@
 
       height: 40px;
       width: 50px;
-      border-radius: 7px;
+      border-radius: 1rem;
       border: 0;
 
       transition: 0.3s all cubic-bezier(0.4, 0, 0.2, 1);
-      background: var(--scrollbar);
-      color: var(--dominate);
+      background: var(--gray-300);
+      color: var(--primary);
 
       &:hover {
-        background: var(--shape-hover);
+        background: var(--gray-400);
       }
     }
   }

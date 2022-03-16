@@ -15,6 +15,7 @@ function Footer() {
           <div className={styles.left}>
             <Link href="/" passHref>
               <MyAnchorToLogo
+                className={styles.logo}
                 draggable={false}
                 src={bigJeagleLogo}
                 alt="Big Jeagle logo"
