@@ -75,49 +75,30 @@ section.heading {
 
 section.artists {
   width: 100%;
-  > .artistCoverage {
-    margin-left: 5rem;
+  margin-bottom: 1rem;
 
-    .artistGroup {
-      margin-bottom: 1rem;
-      h2 {
-        margin-bottom: 0.5rem;
-        font-size: 2rem;
-        font-weight: bold;
-        color: var(--gray-100);
-      }
+  > .artistGroup {
+    margin-bottom: 1rem;
+    transition: all 0.2s;
+    max-width: var(--max-width-coverage);
+    width: 100%;
+    margin: 0 auto;
 
-      article {
-        .controller {
-          display: flex;
-          gap: 0.5rem;
-          margin-bottom: 0.2rem;
-
-          button {
-            width: 70px;
-            height: 100%;
-            padding: 0.5rem;
-
-            transition: all 0.2s;
-
-            border-radius: var(--border-radius-xlarge);
-            background: var(--gray-300);
-            color: var(--black);
-
-            &:hover {
-              filter: brightness(1.2);
-            }
-          }
-        }
-      }
+    h2 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--gray-100);
     }
   }
 }
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  place-items: center;
   gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(273px, 1fr));
+  grid-template-rows: masonry;
 
   > .card {
     position: relative;

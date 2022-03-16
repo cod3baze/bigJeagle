@@ -9,7 +9,7 @@ import styles from "../../styles/components/Header.module.scss";
 export function Header() {
   return (
     <header id={styles.headerContainer}>
-      <nav>
+      <nav id="bigJeagle">
         <div className={styles.logoContainer}>
           <NextLink href="/dashboard" passHref>
             <a href="/dashboard">Genesis</a>
