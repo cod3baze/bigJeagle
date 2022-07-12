@@ -96,3 +96,34 @@ header#headerContainer {
     margin-top: 2px;
   }
 }
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  height: 4rem;
+  margin-bottom: 5rem;
+  padding: 0 1rem;
+
+  background: var(--tertiary-02);
+
+  section {
+    > span {
+      display: inline-block;
+      margin-right: 0.5rem;
+
+      font: normal 400 1.15rem "Chivo", sans-serif;
+      color: var(--white);
+    }
+
+    select {
+      border-radius: 0.5rem;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      padding: 1px 0.4rem;
+
+      font: normal 400 1.3rem "Chivo", sans-serif;
+      background: var(--black);
+    }
+  }
+}
